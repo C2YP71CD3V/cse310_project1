@@ -52,37 +52,37 @@ include CMakeFiles/project1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/project1.dir/flags.make
 
-CMakeFiles/project1.dir/main.cpp.o: CMakeFiles/project1.dir/flags.make
-CMakeFiles/project1.dir/main.cpp.o: ../main.cpp
+CMakeFiles/project1.dir/encoder.cpp.o: CMakeFiles/project1.dir/flags.make
+CMakeFiles/project1.dir/encoder.cpp.o: ../encoder.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /tmp/tmp.5Vcxkm7P5Q/cmake-build-debug/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/project1.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/project1.dir/main.cpp.o -c /tmp/tmp.5Vcxkm7P5Q/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/project1.dir/encoder.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/project1.dir/encoder.cpp.o -c /tmp/tmp.5Vcxkm7P5Q/encoder.cpp
 
-CMakeFiles/project1.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project1.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /tmp/tmp.5Vcxkm7P5Q/main.cpp > CMakeFiles/project1.dir/main.cpp.i
+CMakeFiles/project1.dir/encoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project1.dir/encoder.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /tmp/tmp.5Vcxkm7P5Q/encoder.cpp > CMakeFiles/project1.dir/encoder.cpp.i
 
-CMakeFiles/project1.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project1.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /tmp/tmp.5Vcxkm7P5Q/main.cpp -o CMakeFiles/project1.dir/main.cpp.s
+CMakeFiles/project1.dir/encoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project1.dir/encoder.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /tmp/tmp.5Vcxkm7P5Q/encoder.cpp -o CMakeFiles/project1.dir/encoder.cpp.s
 
-CMakeFiles/project1.dir/main.cpp.o.requires:
-.PHONY : CMakeFiles/project1.dir/main.cpp.o.requires
+CMakeFiles/project1.dir/encoder.cpp.o.requires:
+.PHONY : CMakeFiles/project1.dir/encoder.cpp.o.requires
 
-CMakeFiles/project1.dir/main.cpp.o.provides: CMakeFiles/project1.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/project1.dir/main.cpp.o.provides
+CMakeFiles/project1.dir/encoder.cpp.o.provides: CMakeFiles/project1.dir/encoder.cpp.o.requires
+	$(MAKE) -f CMakeFiles/project1.dir/build.make CMakeFiles/project1.dir/encoder.cpp.o.provides.build
+.PHONY : CMakeFiles/project1.dir/encoder.cpp.o.provides
 
-CMakeFiles/project1.dir/main.cpp.o.provides.build: CMakeFiles/project1.dir/main.cpp.o
+CMakeFiles/project1.dir/encoder.cpp.o.provides.build: CMakeFiles/project1.dir/encoder.cpp.o
 
 # Object files for target project1
 project1_OBJECTS = \
-"CMakeFiles/project1.dir/main.cpp.o"
+"CMakeFiles/project1.dir/encoder.cpp.o"
 
 # External object files for target project1
 project1_EXTERNAL_OBJECTS =
 
-project1: CMakeFiles/project1.dir/main.cpp.o
+project1: CMakeFiles/project1.dir/encoder.cpp.o
 project1: CMakeFiles/project1.dir/build.make
 project1: CMakeFiles/project1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable project1"
@@ -92,7 +92,7 @@ project1: CMakeFiles/project1.dir/link.txt
 CMakeFiles/project1.dir/build: project1
 .PHONY : CMakeFiles/project1.dir/build
 
-CMakeFiles/project1.dir/requires: CMakeFiles/project1.dir/main.cpp.o.requires
+CMakeFiles/project1.dir/requires: CMakeFiles/project1.dir/encoder.cpp.o.requires
 .PHONY : CMakeFiles/project1.dir/requires
 
 CMakeFiles/project1.dir/clean:
