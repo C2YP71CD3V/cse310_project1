@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/tmp.5Vcxkm7P5Q/encoder.cpp" "/tmp/tmp.5Vcxkm7P5Q/cmake-build-debug/CMakeFiles/project1.dir/encoder.cpp.o"
+  "/tmp/tmp.5Vcxkm7P5Q/main.cpp" "/tmp/tmp.5Vcxkm7P5Q/cmake-build-debug/CMakeFiles/project1.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
