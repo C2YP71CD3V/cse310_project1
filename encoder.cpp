@@ -13,16 +13,36 @@ using namespace std;
 int main(int argc, char *argv[]) {
 
     string sortingAlgo = argv[1];
-    string input;
+    string input, totalStr;
 
-    getline(cin, input);
-    cout << input << endl;
 
     if(sortingAlgo == "insertion"){
-        cout << "insertion" << endl;
+
+        int strIndex = 0;
+        //string *strArray = nullptr;
+        while(getline(cin, input)){
+            char nullCh = '\0';
+            int size = input.length();
+            char strArray2D[size][size];
+            for(int row = 0; row < size; row++){
+                strIndex = row;
+                for(int column = 0; column < size; column++){
+                    if(strIndex == size){
+                        strIndex = 0;
+                    }
+                    strArray2D[row][column] = input[strIndex];
+                    strIndex++;
+                }
+                strArray2D[row][size] = nullCh;
+                cout << "index:" << row << " " << strArray2D[row] << endl;
+            }
+        }
+
+
+
+
         // call the insertion sort algorithm with the redirected input file
     } else if(sortingAlgo == "quick"){
-        cout << "quicksort" << endl;
         // call the quicksort algorithm with the redirected input file
     } else {
         cout << "Incorrect sorting algorithm input, please use 'insertion' or 'quick'" << endl;
@@ -30,3 +50,4 @@ int main(int argc, char *argv[]) {
 
 
 }
+
