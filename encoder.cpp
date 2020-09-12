@@ -8,6 +8,7 @@
 #include <string.h>
 #include <iostream>
 
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -19,11 +20,11 @@ int main(int argc, char *argv[]) {
     if(sortingAlgo == "insertion"){
 
         int strIndex = 0;
-        //string *strArray = nullptr;
         while(getline(cin, input)){
             char nullCh = '\0';
             int size = input.length();
             char strArray2D[size][size];
+            char *(strArray)[size];
             for(int row = 0; row < size; row++){
                 strIndex = row;
                 for(int column = 0; column < size; column++){
@@ -34,8 +35,13 @@ int main(int argc, char *argv[]) {
                     strIndex++;
                 }
                 strArray2D[row][size] = nullCh;
-                cout << "index:" << row << " " << strArray2D[row] << endl;
+                for(int index = 0; index < size; index++){
+                    strArray[index] = strArray2D[index];
+                    //cout << "index:" << index << " " << strArray[index] << endl;
+                }
+                //cout << "index:" << row << " " << strArray[row] << endl;
             }
+
         }
 
 
@@ -50,4 +56,8 @@ int main(int argc, char *argv[]) {
 
 
 }
+
+
+
+
 
