@@ -1,1 +1,1 @@
-/usr/bin/c++   -g    CMakeFiles/project1.dir/encoder.cpp.o  -o project1 -rdynamic 
+/usr/bin/c++    -std=c++11 -g    CMakeFiles/project1.dir/encoder.cpp.o  -o project1 -rdynamic 
