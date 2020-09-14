@@ -19,12 +19,10 @@ int main(int argc, char *argv[]) {
 
     if(sortingAlgo == "insertion"){
 
-        int strIndex = 0;
         while(getline(cin, input)){
             int size = input.length();
             string strArray1D[size];
             string* strPtrArray = strArray1D;
-            //string originalStr = "";
 
             // setting up the 1d array
             int inputIndex = 0;
@@ -44,6 +42,7 @@ int main(int argc, char *argv[]) {
                 strPtrArray[j] = strArray1D[j];
             }
 
+            // saving the original string
             string originalStr = strPtrArray[0];
 
             //insertion sort on pointer array
@@ -53,34 +52,54 @@ int main(int argc, char *argv[]) {
                         string temp = strPtrArray[m + 1];
                         strPtrArray[m + 1] = strPtrArray[m];
                         strPtrArray[m] = temp;
+                    } else {
+                        break;
                     }
                 }
             }
 
+            // finding index of original string
+            int originalStrIndex;
             for(int k = 0; k < size; k++){
-                cout << "index:" << k << " " << strPtrArray[k] << endl;
+                if(strPtrArray[k] == originalStr){
+                    originalStrIndex = k;
+                    break;
+                }
             }
 
-            // insertion sort
+            // gathering last letter of each sorted string to form 'last'
+            string last;
+            for(int l = 0; l < size; l++){
+                last.append(strPtrArray[l].substr(size - 1));
+            }
 
-           /* while( n < size - 1){
-                for(int i = n; i > 0; i--){
-
-                    for(int j = i -1; j >= 0; j--){
-
-                        if(strArray[j] > strArray[i]){
-                            char* temp = strArray[j];
-                            strArray[j] = strArray[i];
-                            strArray[i] = temp;
-                        } else {
-                            i = 0;
-                            break;
-                        }
+            // compressing into an encoded cluster
+            string eachLetter = "";
+            int howMany = 0;
+            cout << originalStrIndex << endl;
+            for(int h = 0; h < last.length(); h++){
+                if(eachLetter == ""){
+                    eachLetter = last[h];
+                    howMany++;
+                } else if(eachLetter[0] == last[h]){
+                    howMany++;
+                    if(h == last.length() - 1){
+                        cout << howMany << " " << eachLetter;
+                    }
+                } else if(eachLetter[0] != last[h]){
+                    cout << howMany << " " << eachLetter << " ";
+                    eachLetter = "";
+                    howMany = 1;
+                    eachLetter += last[h];
+                    if(h == last.length() - 1){
+                        cout << howMany << " " << eachLetter;
                     }
                 }
-                n++;
-            } */
+            }
 
+            if(!cin.eof()){
+                cout << endl;
+            }
 
         }
 
