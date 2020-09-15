@@ -1,7 +1,13 @@
-//
-// Created by josep on 9/9/2020.
-//
-
+/*
+ * Name: Joseph Feruglio
+ * Class: CSE310
+ * Assignment: Project-1-Milestone
+ */
+/*
+ * This project milestone takes a .txt file using redirection and compresses
+ * and encodes the data and outputs using redirection
+ * Currently only implements the insertion sorting method
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
@@ -19,16 +25,23 @@ int main(int argc, char *argv[]) {
 
     if(sortingAlgo == "insertion"){
 
+        // Getting data input from cin redirection
         while(getline(cin, input)){
+
+            // Size used to determine size of arrays
             int size = input.length();
+
+            // Checks if its a blank line
             if(size == 0){
                 cout << endl;
                 continue;
             }
+
+            // Declaring my arrays, one is a pointer
             string strArray1D[size];
             string* strPtrArray = strArray1D;
 
-            // setting up the 1d array
+            // setting up the 1d array with the input data
             int inputIndex = 0;
             for(int i = 0; i < size; i++){
                 inputIndex = i;
@@ -77,7 +90,7 @@ int main(int argc, char *argv[]) {
                 last.append(strPtrArray[l].substr(size - 1));
             }
 
-            // compressing into an encoded cluster
+            // compressing 'last' into an encoded cluster
             string eachLetter = "";
             int howMany = 0;
             cout << originalStrIndex << endl;
@@ -103,7 +116,7 @@ int main(int argc, char *argv[]) {
                     }
                 }
             }
-
+            // Checking if we are at end of the file yet
             if(!cin.eof()){
                 cout << endl;
             }
@@ -120,7 +133,7 @@ int main(int argc, char *argv[]) {
         cout << "Incorrect sorting algorithm input, please use 'insertion' or 'quick'" << endl;
     }
 
-
+    return 0;
 }
 
 
