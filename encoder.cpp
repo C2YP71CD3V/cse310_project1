@@ -85,6 +85,9 @@ int main(int argc, char *argv[]) {
                 if(eachLetter == ""){
                     eachLetter = last[h];
                     howMany++;
+                    if(h == last.length() - 1){
+                        cout << howMany << " " << eachLetter;
+                    }
                 } else if(eachLetter[0] == last[h]){
                     howMany++;
                     if(h == last.length() - 1){
