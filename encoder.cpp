@@ -21,6 +21,10 @@ int main(int argc, char *argv[]) {
 
         while(getline(cin, input)){
             int size = input.length();
+            if(size == 0){
+                cout << endl;
+                continue;
+            }
             string strArray1D[size];
             string* strPtrArray = strArray1D;
 
@@ -59,7 +63,7 @@ int main(int argc, char *argv[]) {
             }
 
             // finding index of original string
-            int originalStrIndex;
+            int originalStrIndex = 0;
             for(int k = 0; k < size; k++){
                 if(strPtrArray[k] == originalStr){
                     originalStrIndex = k;
