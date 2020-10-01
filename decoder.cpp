@@ -1,7 +1,15 @@
-//
-// Created by josep on 10/1/2020.
-//
-
+/*
+ * Name: Joseph Feruglio
+ * Class: CSE310
+ * Assignment: Project-1
+ */
+/*
+ * This program takes an encoded .txt file using redirection
+ * and decodes the data by recreating the original information
+ * as it was before the encode procedure.
+ * It takes a command line argument to determine which sorting
+ * method to be used: insertion or quick
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>

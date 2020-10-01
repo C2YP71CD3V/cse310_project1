@@ -4,7 +4,7 @@
  * Assignment: Project-1
  */
 /*
- * This project takes a .txt file using redirection and compresses
+ * This program takes a .txt file using redirection and compresses
  * and encodes the data and outputs using redirection
  * There are two sorting algorithms used in this encoding: insertion and quicksort
  * Command line arguments are required to choose a sorting method
