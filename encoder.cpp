@@ -66,7 +66,6 @@ int main(int argc, char *argv[]) {
     string sortingAlgo = argv[1];
     string input;
 
-
     if(sortingAlgo == "insertion"){
 
         // Getting data input from cin redirection
